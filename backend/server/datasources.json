@@ -1,6 +1,30 @@
 {
   "db": {
+    "url": "mongodb+srv://heroku2018:password2018@moodjournal-voeew.mongodb.net/fi?retryWrites=true",
+    "port": 27017,
+    "database": "db",
     "name": "db",
-    "connector": "memory"
+    "connector": "mongodb",
+    "username": "heroku2018",
+    "password": "password2018"
+  },
+  "users": {
+    "url": "mongodb+srv://heroku2018:password2018@moodjournal-voeew.mongodb.net/fi?retryWrites=true",
+    "port": 27017,
+    "database": "users",
+    "name": "users",
+    "connector": "mongodb",
+    "username": "heroku2018",
+    "password": "password2018"
+  },
+  "mapitems": {
+    "url": "mongodb+srv://heroku2018:password2018@moodjournal-voeew.mongodb.net/fi?retryWrites=true",
+    "port": 27017,
+    "database": "mapitems",
+    "name": "mapitems",
+    "connector": "mongodb",
+    "username": "heroku2018",
+    "password": "password2018"
   }
+
 }

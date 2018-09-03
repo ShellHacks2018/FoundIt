@@ -14,7 +14,7 @@
     ]
   },
   "User": {
-    "dataSource": "db"
+    "dataSource": "users"
   },
   "AccessToken": {
     "dataSource": "db",
@@ -36,7 +36,7 @@
     "public": false
   },
   "MapItem": {
-    "dataSource": "db",
+    "dataSource": "mapitems",
     "public": true
   }
 }
