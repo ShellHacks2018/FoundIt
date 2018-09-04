@@ -1,21 +1,25 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+
+/* Pages */
+import LandingPC from './pages/landing/LandingPC'
+
+/* Styles */
+import './styles/App.css'
+/* React Router v4 */
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 
 class App extends Component {
-  render() {
+  render () {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
+      <Router>
+        <div className='App'>
+          <Switch>
+            <Route exact path='/' component={LandingPC} />
+          </Switch>
+        </div>
+      </Router>
+    )
   }
 }
 
-export default App;
+export default App
