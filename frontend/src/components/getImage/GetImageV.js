@@ -1,5 +1,7 @@
 import React from 'react';
 
+import CamSnapshotC from '../camSnapshot/camSnapshotC'
+
 import Paper from '@material-ui/core/Paper';
 import InputLabel from '@material-ui/core/InputLabel';
 import Input from '@material-ui/core/Input';
@@ -24,7 +26,7 @@ const GetImageV = (props) => {
         return(
           <div>
             <Paper>
-            Cam Stuff!
+            <CamSnapshotC />
             <Button color="secondary" onClick={props.viewTypeCancel}> Cancel </Button>
             </Paper>
           </div>
