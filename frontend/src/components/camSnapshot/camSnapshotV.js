@@ -1,18 +1,35 @@
 import React from 'react';
+import Webcam from 'react-webcam';
 
 import Paper from '@material-ui/core/Paper';
 import Button from '@material-ui/core/Button';
 
 const CamSnapshotV = (props) => {
-  return(
-    <div>
-      <canvas id="canvas">
-      </canvas>
-      <div class="output">
-        <img id="photo" alt="The screen capture will appear in this box." />
+  if(props.image)
+  {
+    return(
+      <div>
+          <img src={props.image} />
+          <button onClick={props.keep}>Keep?</button>
       </div>
-    </div>
-  )  
+    ) 
+  }
+  else{
+    return(
+      <div>
+          <Webcam
+            audio={false}
+            height={350}
+            ref={props.setRef}
+            screenshotFormat="image/jpeg"
+            width={350}
+            videoConstraints={props.videoConstraints}
+          />
+          <button onClick={props.capture}>Capture photo</button>
+      </div>
+    ) 
+  }
+ 
 }
 
 export default CamSnapshotV;
