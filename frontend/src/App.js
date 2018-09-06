@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 /* Pages */
 import LandingPC from './pages/landing/LandingPC'
-
+import mapPC from './pages/map/mapPC'
 /* Styles */
 import './styles/App.css'
 /* React Router v4 */
@@ -15,6 +15,7 @@ class App extends Component {
         <div className='App'>
           <Switch>
             <Route exact path='/' component={LandingPC} />
+            <Route path='/map' component={mapPC} />
           </Switch>
         </div>
       </Router>
