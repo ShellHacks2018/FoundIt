@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
 
+/* Components */
+import NavbarC from './components/navbar/NavbarC'
 /* Pages */
 import LandingPC from './pages/landing/LandingPC'
-import mapPC from './pages/map/mapPC'
+import MapPC from './pages/map/MapPC'
 /* Styles */
 import './styles/App.css'
 /* React Router v4 */
@@ -13,9 +15,10 @@ class App extends Component {
     return (
       <Router>
         <div className='App'>
+          <NavbarC />
           <Switch>
             <Route exact path='/' component={LandingPC} />
-            <Route path='/map' component={mapPC} />
+            <Route path='/map' component={MapPC} />
           </Switch>
         </div>
       </Router>
