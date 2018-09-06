@@ -130,6 +130,13 @@
     recompose "^0.29.0"
     warning "^4.0.1"
 
+"@material-ui/icons@^3.0.1":
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/@material-ui/icons/-/icons-3.0.1.tgz#671fb3d04dcaf9351dbbd2bf82ae2ae72e3d93cd"
+  dependencies:
+    "@babel/runtime" "7.0.0"
+    recompose "^0.29.0"
+
 "@types/jss@^9.5.3":
   version "9.5.5"
   resolved "https://registry.yarnpkg.com/@types/jss/-/jss-9.5.5.tgz#57ed99ae768c203677cd64e0ce0df02c74075bf8"
@@ -6013,6 +6020,12 @@ react-transition-group@^2.2.1:
     loose-envify "^1.3.1"
     prop-types "^15.6.2"
     react-lifecycles-compat "^3.0.4"
+
+react-webcam@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/react-webcam/-/react-webcam-1.0.1.tgz#2e6b7d1ee8221f480f0f4c30a5282f864f0edbfa"
+  dependencies:
+    prop-types "^15.5.8"
 
 react@^16.4.2:
   version "16.4.2"

@@ -1,0 +1,30 @@
+version: '3'
+
+services:
+  foundit_backend:
+    container_name: foundit_backend
+    build: ./backend
+    working_dir: /opt/backend
+    command: yarn start
+    ports:
+      - "3001:3001"
+    volumes:
+      - ./backend/:/opt/backend
+      - /opt/backend/node_modules
+
+  foundit_frontend:
+    container_name: foundit_frontend
+    build: ./frontend
+    working_dir: /opt/frontend
+    command: yarn start
+    ports:
+      - "3000:3000"
+    volumes:
+      # Mount the repo dir
+      - ./frontend/:/opt/frontend
+      # Mount the backend client to the frontend build dir
+      - ./backend/client:/opt/frontend/build
+      # Needed to persist the node_modules after the npm intall. Fixes command not found error
+      # Source: https://stackoverflow.com/questions/30043872/docker-compose-node-modules-not-present-in-a-volume-after-npm-install-succeeds
+      - /opt/frontend/node_modules
+      

@@ -3,14 +3,12 @@ import React, { Component } from 'react'
 /* View */
 import LandingPV from './LandingPV'
 
-class landingPC extends Component {
+class LandingPC extends Component {
   render () {
     return (
-      <div>
-        <LandingPV />
-      </div>
+      <LandingPV />
     )
   }
 }
 
-export default landingPC
+export default LandingPC
