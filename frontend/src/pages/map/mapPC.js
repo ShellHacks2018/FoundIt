@@ -1,11 +1,11 @@
 import React from 'react';
-import mapPV from './mapPV';
+import MapPV from './mapPV';
 
 class mapPC extends React.Component {
     render(){
         return(
             <div>
-                <mapPV />
+                <MapPV />
             </div>
         );
     }

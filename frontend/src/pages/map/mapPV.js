@@ -30,7 +30,7 @@ const styles = {
         
       
 }
-const mapPV = props => {
+const MapPV = props => {
     const {classes} = props
     return (
         <div>
@@ -39,7 +39,7 @@ const mapPV = props => {
                     <Typography variant="title" color="inherit" className={classes.flex}>
                         Profile
                     </Typography>
-                    <Link to='/map'>
+                    <Link to='/'>
                         <Button className={classes.logoutButton} color="inherit">Logout</Button>
                     </Link>
                     <IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
@@ -52,4 +52,4 @@ const mapPV = props => {
     );
 }
 
-export default withStyles(styles)(mapPV)
+export default withStyles(styles)(MapPV)
