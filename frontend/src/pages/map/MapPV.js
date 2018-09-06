@@ -7,6 +7,7 @@ import IconButton from '@material-ui/core/IconButton'
 import MenuIcon from '@material-ui/icons/Menu'
 import { Link } from 'react-router-dom'
 import withStyles from '@material-ui/core/styles/withStyles'
+import MapC from '../../components/map/MapC.js'
 
 const styles = {
   root: {
@@ -41,6 +42,10 @@ const MapPV = props => {
           </IconButton>
         </Toolbar>
       </AppBar>
+
+      <h1 className="my-5">Google Map</h1>
+			<MapC />
+
     </div>
   )
 }
