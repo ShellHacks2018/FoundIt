@@ -6,9 +6,7 @@ import LandingPV from './LandingPV'
 class LandingPC extends Component {
   render () {
     return (
-      <div>
-        <LandingPV />
-      </div>
+      <LandingPV />
     )
   }
 }
