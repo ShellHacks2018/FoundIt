@@ -3,15 +3,19 @@ import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react'
 import PropTypes from 'prop-types'
 
 
+
+
 const MapV = (props) => {
   return(
 		<div>
 			<Map google={props.google}
 					onClick={props.onMapClicked}
 					center = {props.currentLocation}>
-				<Marker onClick={props.onMarkerClicked}
+				{/* <Marker onClick={props.onMarkerClicked}
 								name={'Current location'} 
-								position = {props.currentLocation}/>
+								position = {props.currentLocation}/> */}
+				
+				
 
 				<InfoWindow
 					marker={props.activeMarker}
