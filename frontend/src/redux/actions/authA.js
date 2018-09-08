@@ -21,27 +21,22 @@ import axios from 'axios'
 const authA = (dispatch) => {
   return {
     register: (data) => {
-      let data = {
-        "username":this.props.email,
-        "email": this.props.email,
-        "password": this.props.password
-      };
-  
       let url = "http://localhost:3001/api/Users";
 
       axios.post(url, data).then( (response) => {
-      }).fail((err) => {console.log(err); })
+      }).catch((err) => {console.log(err); })
     },
     login: (data) => {
-      url = 'localhost:3001/api/Users/login';
+      let url = 'http://localhost:3001/api/Users/login';
       axios.post(url, data).then(
         (res) => {
-          localStorage.setItem('user', res.username)
-          localStorage.setItem('token', res.id)
-          localStorage.setItem('userId', res.userId)
+          console.log(res)
+          localStorage.setItem('user', data.email)
+          localStorage.setItem('token', res.data.id)
+          localStorage.setItem('userId', res.data.userId)
           dispatch({type: 'LOGIN'} );
         }
-      )
+      ).catch((err) => {console.log(err); })
     },
     logout: () => {
       localStorage.clear()

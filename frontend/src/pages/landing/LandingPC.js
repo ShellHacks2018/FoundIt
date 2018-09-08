@@ -12,7 +12,7 @@ class LandingPC extends Component {
     this.props.updateEmail(event.target.value)
   }
   updatePassword = event => {
-    this.props.updatePassword(event.target.vlaue)
+    this.props.updatePassword(event.target.value)
   }
 
   signInSubmit = () => {
@@ -20,7 +20,7 @@ class LandingPC extends Component {
       'email': this.props.email,
       'password': this.props.password
     }
-    this.props.authFn.register(data);
+    this.props.authFn.login(data);
   }
 
   createSubmit = () => {
@@ -29,7 +29,7 @@ class LandingPC extends Component {
       'email': this.props.email,
       'password': this.props.password
     }
-    this.props.authFn.login(data);
+    this.props.authFn.register(data);
   }
 
   render () {
