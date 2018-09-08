@@ -2,6 +2,7 @@ import React from 'react'
 import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react'
 import PropTypes from 'prop-types'
 
+
 const MapV = (props) => {
   return(
 		<div>
@@ -33,3 +34,4 @@ MapV.propTypes = {
 export default GoogleApiWrapper({
   apiKey: "AIzaSyBY-_Q11FBbKW5Z2mSsKnlZnQ1qXRS4N90"
 })(MapV)
+

@@ -29,7 +29,7 @@ const MapPV = props => {
   const {classes} = props
   return (
     <div>
-      <AppBar position='static'>
+      {/* <AppBar position='static'>
         <Toolbar>
           <Typography variant='title' color='inherit' className={classes.flex}>
                   Profile
@@ -41,7 +41,7 @@ const MapPV = props => {
             <MenuIcon />
           </IconButton>
         </Toolbar>
-      </AppBar>
+      </AppBar> */}
 
       <h1 className="my-5">Google Map</h1>
 			<MapC />
