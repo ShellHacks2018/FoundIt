@@ -26,7 +26,7 @@ const styles = {
 const NavbarV = props => {
   const { classes } = props
   return (
-    <AppBar position='static'>
+    <AppBar position='fixed'>
       <Toolbar>
         <Typography variant='title' color='inherit' className={classes.flex}>
           Fount It!
