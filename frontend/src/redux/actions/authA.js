@@ -20,6 +20,18 @@ import axios from 'axios'
 
 const authA = (dispatch) => {
   return {
+    register: (data) => {
+      let data = {
+        "username":this.props.email,
+        "email": this.props.email,
+        "password": this.props.password
+      };
+  
+      let url = "http://localhost:3001/api/Users";
+
+      axios.post(url, data).then( (response) => {
+      }).fail((err) => {console.log(err); })
+    },
     login: (data) => {
       url = 'localhost:3001/api/Users/login';
       axios.post(url, data).then(

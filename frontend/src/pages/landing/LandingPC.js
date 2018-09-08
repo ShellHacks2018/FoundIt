@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 
 /* View */
 import LandingPV from './LandingPV'
+import authA from '../../redux/actions/authA';
 
 class LandingPC extends Component {
 
@@ -19,15 +20,16 @@ class LandingPC extends Component {
       'email': this.props.email,
       'password': this.props.password
     }
-    
+    this.props.authFn.register(data);
   }
 
   createSubmit = () => {
     let data = {
+      'username': this.props.email,
       'email': this.props.email,
       'password': this.props.password
     }
-
+    this.props.authFn.login(data);
   }
 
   render () {
@@ -54,7 +56,8 @@ const landingPageState = state => {
 const landingPageAction = dispatch => {
   return {
     updateEmail: (val) => { dispatch({type: 'GET_EMAIL', val: val}) },
-    updatePassword: (val) => { dispatch({type: 'GET_PASSWORD', val: val}) }
+    updatePassword: (val) => { dispatch({type: 'GET_PASSWORD', val: val}) },
+    authFn: authA(dispatch)
   }
 }
 
