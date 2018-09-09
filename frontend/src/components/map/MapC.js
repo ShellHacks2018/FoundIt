@@ -64,8 +64,10 @@ class MapC extends Component{
 							activeMarker={this.state.activeMarker}
 							showingInfoWindow={this.state.showingInfoWindow}
 							selectedPlaceName={this.state.selectedPlace.name}
+							selectedPlaceImg={this.state.selectedPlace.image_url}
+							selectedPlaceRating={this.state.selectedPlace.rating}
 							mapItems={this.props.mapItems}
-							userItems={this.props.userMapItems} />
+							userItem={this.state.selectedPlace.userItem} />
 			</div>
 		)
 	}
