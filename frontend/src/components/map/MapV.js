@@ -6,39 +6,8 @@ import Button from '@material-ui/core/Button'
 
 
 const MapV = (props) => {
-	// const {classes} = props;
+	
 	const MapItems = props.mapItems;
-	let InformationWindow;
-	if(props.userItem){
-		
-		InformationWindow =	<InfoWindow
-				marker={props.activeMarker}
-				visible={props.showingInfoWindow}>
-					<div>
-						<h1>{props.selectedPlaceName}</h1>
-						<img src={props.selectedPlaceImg} alt="" />
-						<div>
-							<text><b>Rating: </b>{props.selectedPlaceRating}</text>		
-						</div>
-						<div>
-							<Button variant="contained" color="secondary">Edit</Button>	
-						</div>											
-					</div>
-			</InfoWindow>
-		
-	}
-	else{		
-		InformationWindow =	<InfoWindow
-				marker={props.activeMarker}
-				visible={props.showingInfoWindow}>
-					<div>
-						<h1>{props.selectedPlaceName}</h1>
-						<img src={props.selectedPlaceImg} alt="" />
-						<text><b>Rating: </b>{props.selectedPlaceRating}</text>																									
-					</div>
-			</InfoWindow>	
-	}
-
   return(		
 		<div>
 			<Map google={props.google}
@@ -58,8 +27,25 @@ const MapV = (props) => {
 						}						
 					)
 				}	
-				{/* render infowindow */}
-				{InformationWindow}
+				{/* render infowindow */}			
+				<InfoWindow
+					marker={props.activeMarker}
+					visible={props.showingInfoWindow}>
+						<div>
+							<h1>{props.selectedPlaceName}</h1>
+							<img src={props.selectedPlaceImg} alt="" />
+							<div>
+								<text><b>Rating: </b>{props.selectedPlaceRating}</text>		
+							</div>
+							{
+							// inline if statement
+								props.userItem &&
+								<div>
+									<Button variant="contained" color="secondary">Edit</Button>	
+								</div> 
+							}																		
+						</div>
+				</InfoWindow>
 			</Map>
 		</div>
     )
