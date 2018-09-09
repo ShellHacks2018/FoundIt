@@ -10,6 +10,7 @@ const MapV = (props) => {
 	const MapItems = props.mapItems;
   return(		
 		<div>
+			{/* {console.log(JSON.stringify(MapItems))} */}
 			<Map google={props.google}
 					onClick={props.onMapClicked}
 					center = {props.currentLocation}>

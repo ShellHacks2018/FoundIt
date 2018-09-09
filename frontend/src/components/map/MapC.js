@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import MapV from './MapV.js'
 import {connect} from 'react-redux'
+import itemA from '../../redux/actions/itemA.js';
 
 class MapC extends Component{
 	constructor(props){
@@ -52,8 +53,12 @@ class MapC extends Component{
 		}  
 	}
 
+	componentDidMount(){
+		this.props.setUserItem.setMapItems();
+	}
+
   render(){
-		this.getCurrentPosition();
+		this.getCurrentPosition();		
 		return(
 			<div>
 				<MapV google={this.props.google}
@@ -84,11 +89,15 @@ MapC.defaultProps = {
 
 const mapStateToProps = state => {
 	return{
-		mapItems: state.itemR.mapItems,
-		userMapItems: state.itemR.userMapItems
+		mapItems: state.itemR.dummyMapItems
 	}
 }
 
+const mapActionToProps = dispatch =>{
+	return{
+		setUserItem: itemA(dispatch)
+	}
+}
 
-export default connect(mapStateToProps)(MapC)
+export default connect(mapStateToProps, mapActionToProps)(MapC)
 
