@@ -1,21 +1,21 @@
 let dummyMapItems = 
 [
    { 
-        "location": {"latitude": 25.756085, "longitude": -80.376185},
+        "location": {"lat": 25.756085, "lng": -80.376185},
         "title": "Temp A",	
         "image_url": "http://wallscollection.net/wp-content/uploads/2017/02/House-Images-Mobile-Compatible.jpg",
         "rating":3,
         "user_id": 1 
     },
     { 
-        "location": {"latitude": 25.759794, "longitude": -80.371109},
+        "location": {"lat": 25.759794, "lng": -80.371109},
         "title": "Temp B",	
         "image_url": "http://wallscollection.net/wp-content/uploads/2017/02/House-Images-Mobile-Compatible.jpg",
         "rating":4,
         "user_id": 2 
     },
     { 
-        "location": {"latitude": 25.756854, "longitude": -80.371467},
+        "location": {"lat": 25.756854, "lng": -80.371467},
         "title": "Temp C",	
         "image_url": "http://wallscollection.net/wp-content/uploads/2017/02/House-Images-Mobile-Compatible.jpg",
         "rating":5,

@@ -1,7 +1,8 @@
 import React, {Component} from 'react'
-import MapV from './MapV.js';
+import MapV from './MapV.js'
+import {connect} from 'react-redux'
 
-export default class MapC extends Component{
+class MapC extends Component{
 	constructor(props){
     super(props);
     const {lat, lng} = this.props.initialCenter;
@@ -62,7 +63,9 @@ export default class MapC extends Component{
 							currentLocation={this.state.currentLocation}
 							activeMarker={this.state.activeMarker}
 							showingInfoWindow={this.state.showingInfoWindow}
-							selectedPlaceName={this.state.selectedPlace.name} />
+							selectedPlaceName={this.state.selectedPlace.name}
+							mapItems={this.props.mapItems}
+							userItems={this.props.userMapItems} />
 			</div>
 		)
 	}
@@ -76,3 +79,14 @@ MapC.defaultProps = {
     lng: -80.374445
   },
 }
+
+const mapStateToProps = state => {
+	return{
+		mapItems: state.itemR.mapItems,
+		userMapItems: state.itemR.userMapItems
+	}
+}
+
+
+export default connect(mapStateToProps)(MapC)
+
