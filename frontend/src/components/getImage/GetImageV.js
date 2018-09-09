@@ -1,7 +1,8 @@
 import React from 'react';
 
 import CamSnapshotC from '../camSnapshot/camSnapshotC'
-
+import CameraIcon from '@material-ui/icons/CameraAlt';
+import PhotoIcon from '@material-ui/icons/Photo';
 import Paper from '@material-ui/core/Paper';
 import InputLabel from '@material-ui/core/InputLabel';
 import Input from '@material-ui/core/Input';
@@ -36,8 +37,8 @@ const GetImageV = (props) => {
         return(
           <div>
             <Paper>
-            <Button color="primary" onClick={props.viewTypeUpload}> Upload </Button>
-            <Button color="primary" onClick={props.viewTypeCamera}> Take Picture </Button>
+            <Button color="primary" onClick={props.viewTypeUpload}> <PhotoIcon /> </Button>
+            <Button color="primary" onClick={props.viewTypeCamera}> <CameraIcon /> </Button>
             </Paper>
           </div>
         )
