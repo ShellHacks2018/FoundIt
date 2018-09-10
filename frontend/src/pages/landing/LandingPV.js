@@ -47,11 +47,11 @@ const LandingPV = props => {
         <CardHeader className={classes.header} title='FoundIt' />
         <CardContent>
           <form className={classes.root}>
-            <TextField id='email' label='Email' margin='normal' fullWidth />
-            <TextField id='password-input' label='Password' type='password' autoComplete='current-password' margin='normal' fullWidth />
+            <TextField id='email' label='Email' margin='normal' onChange={props.updateEmail} fullWidth />
+            <TextField id='password-input' label='Password' type='password' onChange={props.updatePassword} autoComplete='current-password' margin='normal' fullWidth />
             <div className={classes.buttonContainer}>
-              <Button variant='contained' className={classes.buttonCSS}> Sign In </Button>
-              <Button variant='contained' className={classes.buttonCSS}> Create Account </Button>
+              <Button variant='contained' className={classes.buttonCSS} onClick={props.signInSubmit}> Sign In </Button>
+              <Button variant='contained' className={classes.buttonCSS} onClick={props.createSubmit}> Create Account </Button>
             </div>
           </form>
         </CardContent>

@@ -1,7 +1,9 @@
 import React, {Component} from 'react'
-import MapV from './MapV.js';
+import MapV from './MapV.js'
+import {connect} from 'react-redux'
+import itemA from '../../redux/actions/itemA.js';
 
-export default class MapC extends Component{
+class MapC extends Component{
 	constructor(props){
     super(props);
     const {lat, lng} = this.props.initialCenter;
@@ -51,8 +53,12 @@ export default class MapC extends Component{
 		}  
 	}
 
+	componentDidMount(){
+		this.props.setUserItem.setMapItems();
+	}
+
   render(){
-		this.getCurrentPosition();
+		this.getCurrentPosition();		
 		return(
 			<div>
 				<MapV google={this.props.google}
@@ -62,7 +68,11 @@ export default class MapC extends Component{
 							currentLocation={this.state.currentLocation}
 							activeMarker={this.state.activeMarker}
 							showingInfoWindow={this.state.showingInfoWindow}
-							selectedPlaceName={this.state.selectedPlace.name} />
+							selectedPlaceName={this.state.selectedPlace.name}
+							selectedPlaceImg={this.state.selectedPlace.image_url}
+							selectedPlaceRating={this.state.selectedPlace.rating}
+							mapItems={this.props.mapItems}
+							userItem={this.state.selectedPlace.userItem} />
 			</div>
 		)
 	}
@@ -76,3 +86,18 @@ MapC.defaultProps = {
     lng: -80.374445
   },
 }
+
+const mapStateToProps = state => {
+	return{
+		mapItems: state.itemR.dummyMapItems
+	}
+}
+
+const mapActionToProps = dispatch =>{
+	return{
+		setUserItem: itemA(dispatch)
+	}
+}
+
+export default connect(mapStateToProps, mapActionToProps)(MapC)
+

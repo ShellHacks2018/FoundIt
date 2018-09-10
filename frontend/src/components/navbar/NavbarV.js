@@ -23,16 +23,18 @@ const styles = {
   }
 }
 
+
 const NavbarV = props => {
   const { classes } = props
+  
   return (
     <AppBar position='fixed'>
       <Toolbar>
         <Typography variant='title' color='inherit' className={classes.flex}>
-          Fount It!
+          Found It!
         </Typography>
         <Link to='/map'>
-          <Button className={classes.loginButton} color='inherit'>Login</Button>
+          <Button onClick={props.clicked} className={classes.loginButton} color='inherit'>Login</Button>
         </Link>
         <IconButton className={classes.menuButton} color='inherit' aria-label='Menu'>
           <MenuIcon />
@@ -40,6 +42,7 @@ const NavbarV = props => {
       </Toolbar>
     </AppBar>
   )
+  
 }
 
 export default withStyles(styles)(NavbarV)

@@ -1,6 +1,7 @@
 import { combineReducers } from 'redux'
 import authR from './authR'
 import itemR from './itemR'
+import LoginPageR from './LoginPageR'
 
 // We could have each reducer inside a file that holds all the reducers and we
 // import them look at the example they have. But for simplicity lets define
@@ -10,7 +11,9 @@ import itemR from './itemR'
 // combineReducers({counter, todos}) === combineReducers({counter: counter, todos:todos})
 const reducer = combineReducers(
   {
-    authR, itemR
+    authR,
+    itemR,
+    LoginPageR
   }
 )
 export default reducer

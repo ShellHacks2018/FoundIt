@@ -32,12 +32,9 @@ itemA.setUserMapItems(data)
 
 const itemA = (dispatch) => {
   return {
-    setMapItems: (data) => {
-      dispatch({type: 'MAP_ITEMS', val: data})
-    },
-    setUserMapItems: (data) => {
-      dispatch({type: 'USER_MAP_ITEMS', val: data})
-    } 
+    setMapItems: () => {     
+      dispatch({type: 'MAP_ITEMS', payload: true})
+    }    
   }
 }
 
