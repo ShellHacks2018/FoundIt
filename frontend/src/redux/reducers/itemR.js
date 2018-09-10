@@ -6,7 +6,8 @@ const initState = {
 			"image_url": "https://news.fiu.edu/wp-content/uploads/33361133815_4930957805_z-1-1.jpg",
 			"rating":3,
 			"user_id": 1,
-			"userItem": false
+			"userItem": false,
+			"type": "other"
 		},
 		{ 
 			"location": {"lat": 25.759794, "lng": -80.371109},
@@ -14,7 +15,8 @@ const initState = {
 			"image_url": "https://news.fiu.edu/wp-content/uploads/33361133815_4930957805_z-1-1.jpg",
 			"rating":4,
 			"user_id": 2,
-			"userItem": false
+			"userItem": false,
+			"type": "jewelery"
 		},
 		{ 
 			"location": {"lat": 25.756854, "lng": -80.371467},
@@ -22,7 +24,8 @@ const initState = {
 			"image_url": "https://news.fiu.edu/wp-content/uploads/33361133815_4930957805_z-1-1.jpg",
 			"rating":5,
 			"user_id": "5b94b280c29b72670f51cb0c",
-			"userItem": false
+			"userItem": false,
+			"type": "book"
 		}
 	]
 }
