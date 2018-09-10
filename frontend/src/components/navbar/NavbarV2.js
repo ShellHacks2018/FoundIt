@@ -18,7 +18,7 @@ const styles = {
     marginLeft: -12,
     marginRight: 20
   },
-  loginButton: {
+  logoutButton: {
     marginRight: 50
   }
 }
